@@ -1,37 +1,162 @@
-var now = moment().format('MMMM Do YYYY, h:mm:ss a');
+// Store moment in the today variable
+// Store the day and hour in different variables
+var today = moment();
+var currentDay = moment().format("dddd, MMMM " + "Do, YYYY " + "-- HH:mm a");
+var currentHour = moment().format("HH");
 
-//Store current day
-//Update innerHTML of the #currentday <p> to
-//Dayofweek, Month, Dayof month
+// Sets the currentDay to the element with the moment class.
+function setDay() {
+    $("moment").text(currentDay);
+};
 
-// Store current hour
-//if statement before hour color is grey
-//current hour red
-//future hours green
+setDay();
 
-//Create a table with rows from 9 am - 6 pm. (8 rows, 1 row per hour)
-//Three columns (left to right): The hour, The event textbox, the save button.
+// setting up local storage
+function textNine(){
+	var dataToSaveNine = document.getElementById("inputNine").value;	
+	localStorage.setItem("data", dataToSaveNine);  
+	localStorage.getItem("data", dataToSaveNine);
+	console.log(dataToSaveNine)}
 
+function textTen(){
+	var dataToSaveTen = document.getElementById("inputTen").value;
+	localStorage.setItem("data", dataToSaveTen);
+	localStorage.getItem("data", dataToSaveTen);
+	console.log(dataToSaveTen);
+}
+function textEleven(){
+	var dataToSaveEleven = document.getElementById("inputEleven").value;
+	localStorage.setItem("data", dataToSaveEleven);
+	localStorage.getItem("data", dataToSaveEleven);
+	console.log(dataToSaveEleven);
+}
+function textTwelve(){
+	var dataToSaveTwelve = document.getElementById("inputTwelve").value;
+	localStorage.setItem("data", dataToSaveTwelve);
+	localStorage.getItem("data", dataToSaveTwelve);
+	console.log(dataToSaveTwelve);
+}
+function textOne(){
+	var dataToSaveOne = document.getElementById("inputOne").value;
+	localStorage.setItem("data", dataToSaveOne);
+	localStorage.getItem("data", dataToSaveOne);
+	console.log(dataToSaveOne);
+}
+function textTwo(){
+	var dataToSaveTwo = document.getElementById("inputTwo").value;
+	localStorage.setItem("data", dataToSaveTwo);
+	localStorage.getItem("data", dataToSaveTwo);
+	console.log(dataToSaveTwo);
+}
+function textThree(){
+	var dataToSaveThree = document.getElementById("inputThree").value;
+	localStorage.setItem("data", dataToSaveThree);
+	localStorage.getItem("data", dataToSaveThree);
+	console.log(dataToSaveThree);
+}
+function textFour(){
+	var dataToSaveFour = document.getElementById("inputFour").value;
+	localStorage.setItem("data", dataToSaveFour);
+	localStorage.getItem("data", dataToSaveFour);
+	console.log(dataToSaveFour);
+}
+function textFive(){
+	var dataToSaveFive = document.getElementById("inputFive").value;
+	localStorage.setItem("data", dataToSaveFive);
+	localStorage.getItem("data", dataToSaveFive);
+	console.log(dataToSaveFive);
+}
 
-//WHEN I click into a timeblock
-//THEN I can enter an event
-//Create a textArea for the middle column.
+textNine();
+textTen();
+textEleven();
+textTwelve();
+textOne();
+textTwo();
+textThree();
+textFour();
+textFive();
 
+// change background based on hour
 
-//WHEN I click the save button for that timeblock
-//THEN the text for that event is saved in local storage
-    //Event listener for "click" the save icon for each row.
-    //Create a function for any save button click.
-    //Use the this keyword and the before pseudo class to 
-    //store the text in the text area thats associated with 
-    //the respective save icon button. Store this to text to local storage.
-    //Have the text value persist in the text area upon refresh.
-
-    //Create a localStorage name/value pair with name="lastname" and value="Smith", then retrieve the value of "lastname" and insert it into the element with id="result":
-    // Store
-    //localStorage.setItem("lastname", "Smith");
-    // Retrieve
-    //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-    //Store a localStorage property for each unique textarea.
-    //have a unique textarea id for each. 
-    //Maybe have the same localStorage poperty name and textarea id
+if (currentHour > 9 ) {
+	document.getElementById("nineAM").style.borderColor = "grey";
+}
+else if (currentHour == 9) {
+	document.getElementById("nineAM").style.borderColor = "red";
+}
+else if (currentHour < 9) {
+	document.getElementById("nineAM").style.borderColor = "green";
+}
+if (currentHour > 10 ) {
+	document.getElementById("tenAM").style.borderColor = "grey";
+}
+else if (currentHour == 10) {
+	document.getElementById("tenAM").style.borderColor = "red";
+}
+else if (currentHour < 10) {
+	document.getElementById("tenAM").style.borderColor = "green";
+}
+if (currentHour > 11 ) {
+	document.getElementById("elevenAM").style.borderColor = "grey";
+}
+else if (currentHour == 11) {
+	document.getElementById("elevenAM").style.borderColor = "red";
+}
+else if (currentHour < 11) {
+	document.getElementById("elevenAM").style.borderColor = "green";
+}
+if (currentHour > 12 ) {
+	document.getElementById("twelvePM").style.borderColor = "grey";
+}
+else if (currentHour == 12) {
+	document.getElementById("twelvePM").style.borderColor = "red";
+}
+else if (currentHour < 12) {
+	document.getElementById("twelvePM").style.borderColor = "green";
+}
+if (currentHour > 13 ) {
+	document.getElementById("onePM").style.borderColor = "grey";
+}
+else if (currentHour == 13) {
+	document.getElementById("onePM").style.borderColor = "red";
+}
+else if (currentHour < 13) {
+	document.getElementById("onePM").style.borderColor = "green";
+}
+if (currentHour > 14 ) {
+	document.getElementById("twoPM").style.borderColor = "grey";
+}
+else if (currentHour == 14) {
+	document.getElementById("twoPM").style.borderColor = "red";
+}
+else if (currentHour < 14) {
+	document.getElementById("twoPM").style.borderColor = "green";
+}
+if (currentHour > 15 ) {
+	document.getElementById("threePM").style.borderColor = "grey";
+}
+else if (currentHour == 15) {
+	document.getElementById("threePM").style.borderColor = "red";
+}
+else if (currentHour < 15) {
+	document.getElementById("threePM").style.borderColor = "green";
+}
+if (currentHour > 16 ) {
+	document.getElementById("fourPM").style.borderColor = "grey";
+}
+else if (currentHour == 16) {
+	document.getElementById("fourPM").style.borderColor = "red";
+}
+else if (currentHour < 16) {
+	document.getElementById("fourPM").style.borderColor = "green";
+}
+if (currentHour > 17 ) {
+	document.getElementById("fivePM").style.borderColor = "grey";
+}
+else if (currentHour == 17) {
+	document.getElementById("fivePM").style.borderColor = "red";
+}
+else if (currentHour < 17) {
+	document.getElementById("fivePM").style.borderColor = "green";
+}
