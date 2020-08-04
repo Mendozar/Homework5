@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,16 +24,361 @@
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">Current Day</p>
+
+    <!--Header with the current day and time.-->
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Workday Scheduler</h1>
+          <p class="lead">A simple calendar app for scheduling your workday.</p>
+          <h4 class="currentDateTime">
+              <p id="moment">
+              </p>
+            </h4>
+        </div>
     </header>
+
+
+    <!-- 9 AM Block -->
     <div class="container">
-      <!-- Timeblocks go here -->
+        <div class="row">
+
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                    9 AM 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="nineAM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputNine" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textTen()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 10 AM Block -->
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                    10 AM 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="tenAM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputTen" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textTen()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- 11 AM Block -->
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                    11 AM 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="elevenAM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputEleven" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textEleven()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+
+    <!-- 12 PM Block -->
+    <div class="container">
+        <div class="row">
+                
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                    12 PM 
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="twelvePM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputTwelve" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textTwelve()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                  
+        </div>
+    </div>
+
+
+    <!-- 1 PM Block -->
+    <div class="container">
+        <div class="row">
+                    
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        1 PM 
+                    </div>
+                </div>
+            </div>
+                    
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="onePM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputOne" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+                    
+                    
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textOne()">
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                      
+        </div>
+    </div>
+
+    <!-- 2 PM Block -->
+    <div class="container">
+        <div class="row">
+                        
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                            2 PM 
+                    </div>
+                </div>                
+            </div>
+                        
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="twoPM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputTwo" type="text">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+                        
+                        
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <button onclick="textTwo()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                          
+        </div>
+    </div>
+
+    <!-- 3 PM Block -->                
+    <div class="container">
+        <div class="row">
+                            
+            <div class="col-sm-2">            
+                <div class="card">        
+                    <div class="card-body">
+                        3 PM 
+                    </div>
+                </div>
+            </div>
+                            
+            <div class="col-sm-8">
+                <div class="form-group textarea">
+                    <div id="threePM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputThree" type="text">
+
+                        </textarea>
+                    </div>                  
+                </div>
+            </div>
+                            
+                            
+                                
+            <div class="col-sm-2">  
+                <div class="card">                
+                    <div class="card-body">                
+                        <button onclick="textThree()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>      
+                    </div>   
+                </div>          
+            </div>
+                              
+                            
+        </div>                   
+    </div>
+
+    <!-- 4 PM Block -->                
+    <div class="container">
+        <div class="row">
+                                
+            <div class="col-sm-2">                
+                <div class="card">            
+                    <div class="card-body">            
+                        4 PM      
+                    </div>          
+                </div>                
+            </div>
+                                
+                                
+            <div class="col-sm-8">                
+                <div class="form-group textarea">
+                    <div id="fourPM">  
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputFour" type="text">
+                        </textarea>
+                    </div>                  
+                </div>
+            </div>
+                                
+                                
+                                    
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">                    
+                        <button onclick="textFour()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>              
+                    </div>                  
+                </div>                            
+            </div>
+                                                 
+        </div>                     
+    </div>
+
+    <!-- 5 PM Block -->                                        
+    <div class="container">                      
+        <div class="row">
+                                    
+            <div class="col-sm-2">
+                <div class="card">  
+                    <div class="card-body">
+                        5 PM 
+                    </div>       
+                </div>          
+            </div>
+                                    
+                                    
+            <div class="col-sm-8">   
+                <div class="form-group textarea">
+                    <div id="fivePM">
+                        <textarea class="form-control" placeholder="text goes here..." input ID="inputFive" type="text">
+                        </textarea>
+                    </div>                    
+                </div>                        
+            </div>
+                                    
+                                    
+                                        
+            <div class="col-sm-2">                            
+                <div class="card">                        
+                    <div class="card-body">                        
+                        <button onclick="textFive()"> 
+                            <div class ="saveBtn">
+                                <i class="far fa-save"></i>
+                            </div>
+                        </button>                  
+                    </div>                      
+                </div>                                
+            </div>
+
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+  
+</body>
+
 </html>
